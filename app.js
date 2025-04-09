@@ -45,6 +45,7 @@ app.use(requestIp.mw());
 
 const limiter = rateLimit({
   max: process.env.MAX_REQUESTS_PER_HOUR,
+  // Might be adjusted depending on the usage
   windowMs: 60 * 60 * 1000,
   message: 'Too many requests from this IP. Please try again in an hour',
   keyGenerator: (req, res) => {

@@ -77,12 +77,14 @@ const courseSchema = new mongoose.Schema({
     type: String,
     required: [true, 'course duration required'],
   },
+  //File id on google drive
   fileId: {
     type: String,
     required: [true, 'fileId required'],
   },
 
   coverImage: { type: String, required: [true, 'Cover image required'] },
+  // Additonal image URLs
   images: [
     {
       type: String,
